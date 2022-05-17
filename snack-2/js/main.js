@@ -53,16 +53,28 @@ const zucchine = [{
         peso: "100",
         lunghezza: "20",
     },
-]
+];
 const smallZuc = []
 const bigZuc = []
+let bigSum = 0;
+let smallSum = 0;
 let sum = 0;
 for (let i = 0; i < zucchine.length; i++) {
+    sum += zucchine[i].peso;
     if (zucchine[i].lunghezza > 15) {
         bigZuc.push(zucchine[i])
+        bigSum += sum;
     } else {
         smallZuc.push(zucchine[i])
+        smallSum += sum;
     }
+    bigSum += bigZuc[i].peso;
 }
-console.log(smallZuc)
+
 console.log(bigZuc)
+console.log(smallZuc)
+
+// let sum = 0;
+// for (let j = 0; j < smallZuc.length; j++) {
+//     sum += smallZuc.peso[j];
+// }
