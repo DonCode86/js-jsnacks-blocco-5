@@ -43,7 +43,7 @@ const cars = [{
     {
         marca: "dacia",
         modello: "duster",
-        alimentazione: "metano",
+        alimentazione: "benzina",
     },
 
     {
