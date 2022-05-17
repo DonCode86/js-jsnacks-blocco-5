@@ -58,14 +58,18 @@ const cars = [{
         alimentazione: "diesel",
     }
 ]
+const benzinaContainer = []
+const dieselContainer = []
+const othersContainer = []
 
 const carsDiesel = cars.filter((elm) => {
     if (elm.alimentazione === "diesel") {
+
         return true;
     }
     return false;
 })
-console.log(carsDiesel);
+
 
 const carsBenzina = cars.filter((elm) => {
     if (elm.alimentazione === "benzina") {
@@ -73,4 +77,14 @@ const carsBenzina = cars.filter((elm) => {
     }
     return false;
 })
-console.log(carsBenzina);
+
+const othersCar = cars.filter((elm) => {
+    if (elm.alimentazione !== "benzina" && elm.alimentazione !== "diesel") {
+        return true;
+    }
+    return false;
+})
+
+console.log(carsBenzina)
+console.log(carsDiesel)
+console.log(othersCar)
